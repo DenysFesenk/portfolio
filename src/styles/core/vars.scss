@@ -1,5 +1,8 @@
 // colors
 $black: #000;
+$grey: #86868b;
+$grey-dark: #515154;
+$bgrd-color: #fbfbfd;
 
 @function px_to_rem($target, $context: $base-size) {
     @if $target==0 {

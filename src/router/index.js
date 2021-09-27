@@ -1,20 +1,25 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import AllAboutMe from '../views/AllAboutMe.vue'
+import AboutMe from '../views/AboutMe.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'AllAboutMe',
-    component: AllAboutMe
+    name: 'AboutMe',
+    component: AboutMe
   },
   {
     path: '/myworks',
     name: 'My Works',
-    component: () => import(/* webpackChunkName: "work" */ '../views/MyWorks.vue')
-  }
+    component: () => import(/* webpackChunkName: "work" */ '../views/Works.vue')
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import(/* webpackChunkName: "work" */ '../views/Contact.vue')
+  },
 ]
 
 const router = new VueRouter({

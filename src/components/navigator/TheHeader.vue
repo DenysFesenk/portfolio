@@ -18,12 +18,16 @@ export default {
       routes: [
         {
           path: "/",
-          name: "All About Me",
+          name: "About Me",
         },
         {
-          path: "/myworks",
-          name: "My Works",
+          path: "/works",
+          name: "Works",
         },
+        {
+          path: "/contact",
+          name: "Contact",
+        }
       ],
     };
   },
@@ -33,8 +37,8 @@ export default {
 <style lang="scss">
 .header {
   &__list {
-    @include flex(center, center);
-    padding: 20px 0;
+    @include flex(flex-end, center);
+    padding: 20px;
   }
   &__item {
     &:not(:last-child) {
@@ -42,11 +46,15 @@ export default {
     }
   }
   &__item-link{
-    @include text($H210, 700, $black);
+    @include text($H210, 400, $black);
+    @include transition;
     &.router-link-exact-active {
-        color: #b8860b;
-        border-bottom: 1px solid #b8860b;
+        color: $grey;
       }
+    &:hover{
+      border-bottom: 1px solid $grey-dark;
+      color: $grey-dark;
+    }
   }
 }
 </style>
