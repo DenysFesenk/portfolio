@@ -40,7 +40,7 @@ export default {
 
 <style lang="scss">
 .contact {
-  height: 90vh;
+  height: 80vh;
   @include flex(center, center);
   &__list {
     @include flex(center, center);
